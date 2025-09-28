@@ -31,6 +31,7 @@ nav ul li a:hover, nav ul li a.active { background: #f0c040; color: #243b6b; }
   cursor: pointer;
   gap: 5px;
   position: relative;
+  margin-left: auto;
   z-index: 1100;
 }
 .menu-toggle span {
@@ -178,3 +179,4 @@ footer {
   padding: 15px 0;
   margin-top: 40px;
 }
+
