@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
-header .logo { font-size: 22px; font-weight: bold; color: #f0c040; letter-spacing: 1px; }
+header .logo { font-size: 28px; font-weight: bold; color: #f0c040; letter-spacing: 1px; }
 nav ul { list-style: none; display: flex; gap: 20px; }
 nav ul li a {
   color: #fff; text-decoration: none; font-weight: 600;
@@ -179,4 +179,5 @@ footer {
   padding: 15px 0;
   margin-top: 40px;
 }
+
 
