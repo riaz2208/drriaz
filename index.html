@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Dr. Muhammad Riaz</title>
+<link rel="stylesheet" href="style.css">
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Home Section */
+#home {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f4f4f9, #eaeef5);
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-left h1 {
+  font-size: 40px;
+  color: #243b6b;
+  margin-bottom: 15px;
+}
+
+.home-left h1 span {
+  color: #f0c040;
+}
+
+.home-left h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.buttons button:first-child {
+  background: #243b6b;
+  color: #fff;
+}
+
+.buttons .btn-alt {
+  background: #f0c040;
+  color: #243b6b;
+}
+
+/* Button Hover Effects */
+.buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(240,192,64,0.7), 0 0 30px rgba(36,59,107,0.6);
+}
+
+/* Image */
+.home-right img {
+  border-radius: 360px;
+  max-width: 350px;
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Highlights Section */
+#highlights {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+#highlights h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #243b6b;
+  margin-bottom: 40px;
+}
+
+.highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Icon Styling & Animation */
+.card i {
+  font-size: 40px;
+  color: #f0c040;
+  margin-bottom: 15px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.card:hover i {
+  color: #243b6b;
+  transform: translateY(-5px) scale(1.2);
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #243b6b;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Dr. Muhammad Riaz</div>
+  <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="home-container">
+    <div class="home-left">
+      <h1>Hello, I'm <span>Dr. Muhammad Riaz</span></h1>
+      <h2>Web Developer | Mathematician | Researcher</h2>
+      <p>
+        I am a dedicated <strong>Web Developer</strong> having <strong>PhD in Mathematics</strong> with a passion for blending 
+        analytical precision and creativity. I specialize in designing and developing 
+        modern, responsive, and user-friendly websites that are tailored to the unique needs of businesses, students, and researchers. 
+        With my academic and professional expertise, I also provide mentorship in advanced mathematics, research writing, and programming.
+      </p>
+      <div class="buttons">
+        <button onclick="window.location.href='portfolio.html'">View My Work</button>
+        <button class="btn-alt" onclick="window.location.href='contact.html'">Hire Me</button>
+      </div>
+    </div>
+    <div class="home-right">
+      <img src="file:///C:/Users/Muhammad%20Riaz/Desktop/Wesbite%202/image.jpg" alt="Dr. Muhammad Riaz">
+    </div>
+  </div>
+</section>
+
+<!-- Quick Highlights Section -->
+<section id="highlights">
+  <h2>What I Offer</h2>
+  <div class="highlight-cards">
+    <div class="card">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Web Development</h3>
+      <p>I create professional, responsive, and user-friendly websites tailored to businesses, startups, and individuals, ensuring both creativity and functionality.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Mathematics Teaching</h3>
+      <p>With my PhD background, I provide advanced mathematics coaching, making complex concepts simple for students, researchers, and professionals.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-file-alt"></i>
+      <h3>Research & Publications</h3>
+      <p>I guide in research writing, thesis preparation, and journal publications, blending academic expertise with technical precision.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-code"></i>
+      <h3>Programming & Mentorship</h3>
+      <p>Helping learners build programming skills in web technologies and providing mentorship to shape their academic and professional journey.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Dr. Muhammad Riaz - All Rights Reserved</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

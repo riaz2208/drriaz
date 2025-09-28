@@ -1,0 +1,180 @@
+/* Reset & Global */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #f4f4f9; color: #333; line-height: 1.6; }
+html { scroll-behavior: smooth; }
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1a2b4d, #243b6b);
+  color: #fff;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+header .logo { font-size: 22px; font-weight: bold; color: #f0c040; letter-spacing: 1px; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav ul li a {
+  color: #fff; text-decoration: none; font-weight: 600;
+  padding: 10px 18px; border-radius: 25px; transition: all 0.3s ease;
+}
+nav ul li a:hover, nav ul li a.active { background: #f0c040; color: #243b6b; }
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: relative;
+  z-index: 1100;
+}
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #243b6b;
+    flex-direction: column;
+    width: 220px;
+    max-height: 0;              /* Hidden by default */
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0 0 8px 8px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  nav ul.show {
+    max-height: 500px;          /* Enough space for menu items */
+    padding: 20px;
+  }
+
+  .menu-toggle { display: flex; }
+}
+
+/* Hamburger to X animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sections */
+section { padding: 80px 20px; min-height: 100vh; }
+h1.section-title { margin-bottom: 20px; font-size: 28px; color: #243b6b; text-align: center; }
+
+/* Home Section */
+#home {
+  background: linear-gradient(135deg, #1a1a2e, #243b6b);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.home-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+.home-right img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f0c040;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.home-left h1 { font-size: 42px; margin-bottom: 10px; color: #f0c040; }
+.home-left h2 { font-size: 22px; margin-bottom: 18px; }
+.home-left p { margin-bottom: 20px; max-width: 500px; text-align: justify; }
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.buttons button:first-child { background: #f0c040; color: #243b6b; }
+.buttons button:first-child:hover { background: #e0a020; transform: translateY(-3px); }
+.buttons .btn-alt { background: transparent; border: 2px solid #f0c040; color: #f0c040; }
+.buttons .btn-alt:hover { background: #f0c040; color: #243b6b; transform: translateY(-3px); }
+
+/* Portfolio & Project Cards */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.project {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover { transform: translateY(-5px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
+.project h2 {
+  background: linear-gradient(90deg, #243b6b, #1a2b4d);
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  margin: 0;
+}
+.project p { padding: 15px; font-size: 14px; color: #444; }
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  padding: 10px;
+  background: #243b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover { background: #1a2b4d; }
+
+/* Footer */
+footer {
+  background: #243b6b;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
